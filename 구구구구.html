@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>구예림 포트폴리오</title>
+  <style>
+    /* ===========================
+       기본 스타일 설정
+    ============================ */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', Arial, sans-serif;
+    }
+
+    body {
+      background: linear-gradient(135deg, #ffb6c1, #fff8f0, #d4af37, #8b5e3c);
+      background-size: 400% 400%;
+      animation: gradientBG 20s ease infinite;
+      color: #333;
+      line-height: 1.6;
+    }
+
+    @keyframes gradientBG {
+      0% {background-position: 0% 50%;}
+      50% {background-position: 100% 50%;}
+      100% {background-position: 0% 50%;}
+    }
+
+    h1, h2, h3 {
+      font-weight: bold;
+      text-align: center;
+      margin-bottom: 20px;
+      color: #8b5e3c;
+    }
+
+    section {
+      padding: 80px 20px;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    /* ===========================
+       Hero Section
+    ============================ */
+    .hero {
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      color: #fff;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero h1 {
+      font-size: 3rem;
+      color: #fff;
+      text-shadow: 2px 2px 10px rgba(0,0,0,0.3);
+    }
+
+    .hero p {
+      font-size: 1.5rem;
+      margin-top: 20px;
+      color: #fff;
+      text-shadow: 1px 1px 5px rgba(0,0,0,0.3);
+    }
+
+    .typing {
+      border-right: 2px solid #fff;
+      white-space: nowrap;
+      overflow: hidden;
+      animation: typing 5s steps(40, end), blink 0.75s step-end infinite;
+    }
+
+    @keyframes typing {
+      from { width: 0 }
+      to { width: 100% }
+    }
+
+    @keyframes blink {
+      50% { border-color: transparent }
+    }
+
+    /* ===========================
+       카드 공통 스타일
+    ============================ */
+    .card {
+      background: rgba(255,255,255,0.8);
+      border-radius: 15px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+      padding: 30px;
+      margin: 20px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 12px 30px rgba(0,0,0,0.25);
+    }
+
+    .card h3 {
+      margin-bottom: 15px;
+      color: #d4af37;
+    }
+
+    /* ===========================
+       About Me Section
+    ============================ */
+    .about-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .about-card {
+      flex: 1 1 300px;
+      max-width: 400px;
+    }
+
+    /* ===========================
+       Skills Section
+    ============================ */
+    .skills-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .skill-card {
+      flex: 1 1 250px;
+      max-width: 300px;
+    }
+
+    .progress-bar {
+      background: #eee;
+      border-radius: 10px;
+      overflow: hidden;
+      margin-top: 10px;
+    }
+
+    .progress {
+      height: 15px;
+      background: linear-gradient(90deg, #ff69b4, #d4af37);
+      width: 70%;
+      animation: grow 2s ease forwards;
+    }
+
+    @keyframes grow {
+      from {width: 0;}
+      to {width: 70%;}
+    }
+
+    /* ===========================
+       Favorites Section
+    ============================ */
+    .favorites-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .favorite-card {
+      flex: 1 1 150px;
+      max-width: 200px;
+      text-align: center;
+      font-size: 2rem;
+    }
+
+    .favorite-card:hover {
+      background: #fff0f5;
+      transform: scale(1.1);
+    }
+
+    /* ===========================
+       Dream Section
+    ============================ */
+    .dream-card {
+      text-align: center;
+      font-size: 1.2rem;
+    }
+
+    /* ===========================
+       Quote Section
+    ============================ */
+    .quote-card {
+      text-align: center;
+      font-size: 1.5rem;
+      font-style: italic;
+      color: #8b5e3c;
+    }
+
+    /* ===========================
+       Footer
+    ============================ */
+    footer {
+      text-align: center;
+      padding: 20px;
+      background: rgba(255,255,255,0.7);
+      font-size: 0.9rem;
+      color: #555;
+    }
+
+    /* ===========================
+       반응형
+    ============================ */
+    @media (max-width: 768px) {
+      .hero h1 {font-size: 2.2rem;}
+      .hero p {font-size: 1.2rem;}
+      section {padding: 50px 10px;}
+    }
+  </style>
+</head>
+<body>
+  <!-- ===========================
+       Hero Section
+  ============================ -->
+  <section class="hero">
+    <h1>구예림</h1>
+    <p class="typing">감자는 세계다</p>
+  </section>
+
+  <!-- ===========================
+       About Me
+  ============================ -->
+  <section>
+    <h2>About Me</h2>
+    <div class="about-container">
+      <div class="card about-card">
+        <h3>내 정보</h3>
+        <p><strong>관심 분야:</strong> 감자와 응가</p>
+        <p><strong>취미:</strong> 똥 피하기 게임 하기</p>
+        <p><strong>좋아하는 것:</strong> 감자와 응가, 아빠, 나</p>
+        <p><strong>잘하는 것:</strong> 수용적 태도</p>
+        <p><strong>앞으로 해보고 싶은 것:</strong> 줏대 있게 살기</p>
+        <p><strong>성격:</strong> 신경질적인 감자</p>
+        <p><strong>꿈:</strong> 줏대 있게 살기, 행복하게 살자~</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===========================
+       Skills
+  ============================ -->
+  <section>
+    <h2>My Skills</h2>
+    <div class="skills-container">
+      <div class="card skill-card">
+        <h3>수용적 태도</h3>
+        <div class="progress-bar"><div class="progress"></div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===========================
+       Favorites
+  ============================ -->
+  <section>
+    <h2>My Favorites</h2>
+    <div class="favorites-container">
+      <div class="card favorite-card">🥔<p>감자</p></div>
+      <div class="card favorite-card">💩<p>응가</p></div>
+      <div class="card favorite-card">👨<p>아빠</p></div>
+      <div class="card favorite-card">😊<p>나</p></div>
+    </div>
+  </section>
+
+  <!-- ===========================
+       Dream
+  ============================ -->
+  <section>
+    <h2>My Dream</h2>
+    <div class="card dream-card">
+      <p>앞으로 줏대 있게 살고, 행복하게 살아가는 삶을 꿈꿉니다.</p>
+    </div>
+  </section>
+
+  <!-- ===========================
+       Quote
+  ============================ -->
+  <section>
+    <h2>Quote</h2>
+    <div class="card quote-card">
+      <p>"감자는 세계다"</p>
+    </div>
+  </section>
+
+  <!-- ===========================
+       Footer
+  ============================ -->
+  <footer>
+    <p>Made with AI & My Imagination</p>
+  </footer>
+
+  <script
